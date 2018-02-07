@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'java-practice-programs'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+ // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-core
+    compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version: '2.8.2';
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common
+    compile group: 'org.apache.hadoop', name: 'hadoop-common', version: '2.8.2';
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs
+    compile group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: '2.8.2'
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-annotations
+//    compile group: 'org.apache.hadoop', name: 'hadoop-annotations', version: '2.8.2';\
+
+// https://mvnrepository.com/artifact/org.apache.hbase/hbase
+//    compile group: 'org.apache.hbase', name: 'hbase', version: '1.2.6', ext: 'pom'
+//    // https://mvnrepository.com/artifact/org.apache.hbase/hbase
+//    compile group: 'org.apache.hbase', name: 'hbase', version: '0.94.3'
+//
+//    // https://mvnrepository.com/artifact/org.apache.hbase/hbase
+//    compile group: 'org.apache.hbase', name: 'hbase', version: '0.90.4-cdh3u2'
+
+    // https://mvnrepository.com/artifact/org.apache.hbase/hbase-common
+    compile group: 'org.apache.hbase', name: 'hbase-common', version: '1.2.6'
+
+    // https://mvnrepository.com/artifact/org.apache.hbase/hbase-client
+    compile group: 'org.apache.hbase', name: 'hbase-client', version: '1.2.6'
+
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-core
+    compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '2.2.1'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
